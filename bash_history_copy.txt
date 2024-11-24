@@ -1,0 +1,187 @@
+cd ..
+cd tobias/
+exit
+clear
+ls -la
+cd ..
+cd tobias/
+clear
+ls -la
+ssh-keygen
+cd .ssh/
+cat id_rsa.pub 
+cd ..
+mkdir repogit
+cd repogit/
+git clone git@github.com:tobiasesquivel/UTNFRA_SO_2do_Parcial_Esquivel.git
+ls -l
+clear
+ls -l
+cd ..
+git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh
+source ~/.bashrc
+ls -l
+mv RTA_Examen_20241124/ repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+clear
+ls -l
+cd repogit/
+ls -l
+cd UTNFRA_SO_2do_Parcial_Esquivel/
+git --version
+clear
+cd ..
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+# Add the repository to Apt sources:
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo docker run hello-world
+docker --version
+sudo systemctl status docker
+clear
+sudo fdisk -l
+sudo vgs
+sudo lvs
+sudo lsblk -f
+df -h
+sudo fdisk -l
+clear
+sudo fdisk -l
+clear
+lsblk
+ls -l
+cd repogit/
+ls -l
+cd UTNFRA_SO_2do_Parcial_Esquivel/
+ls -l
+cd RTA_Examen_20241124/
+vim Punto_A.sh 
+cat Punto_A.sh 
+vim Punto_B.sh 
+cat Punto_B.sh 
+ls -l
+touch ejecutar_esquivel.sh
+ls -
+-ls -l
+clear
+ls -l
+chmod 777 ejecutar_esquivel.sh 
+ls -l
+vim ejecutar_esquivel.sh 
+cat ejecutar_esquivel.sh 
+cd ..
+ls -l
+git status
+git add .
+git status
+git commit -m "Punto a y b completos"
+git config --global user.email tobias15esquivel@gmail.com
+git congig --global user.name tobiasesquivel
+git config --global user.name tobiasesquivel
+git status
+git push
+git commit -m "Puntos a y b completos"
+git push
+cd ..
+ls -l
+cd ..
+ls -l
+cd UTN-FRA_SO_Examenes/
+ls -l
+cd 202406
+ls -l
+cd docker/
+ls -l
+vim index.html 
+id
+sudo usermod -a -G docker $(whoami)
+id
+exit
+id
+clear
+cd ..
+cd tobias/
+clear
+ls -l
+cd UTN-FRA_SO_Examenes/
+ls -l
+cd 202406
+ls -l
+cat script_Precondicion.sh 
+clear
+ls -l
+cd docker/
+ls -l
+vim index.html 
+touch web1-esquivel
+vim web1-esquivel 
+clear
+ls -l
+docker build -t web1-esquivel
+docker build -t web1-esquivel .
+docker login -u tobiasesquivel
+clear
+ls -l
+docker build -t tobiasesquivel/web1-esquivel -f web1-esquivel .
+ls -l
+docker images
+docker tag web1-esquivel tobiasesquivel/web1-esquivel
+docker tag web1-esquivel tobiasesquivel/tobiasesquivel/web1-esquivel
+clear
+docker images
+docker push tobiasesquivel/web1-esquivel
+nano run.sh
+cat run.sh 
+chmod 777 run.sh 
+ls -l
+./run.sh 
+docker ps
+sudo apt install net-tools
+clear
+sudo netstat -putona | grep ":8080"
+sudo netstat | grep ":8080"
+curl http://localhost:8080
+docker ps
+docker stop 679432b3889d
+docker ps
+cd ..
+ls -l /home
+ls -l /tobias
+ls -l /home/tobias
+ls -l /home/tobias/repogit/
+ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+cp ./202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+ls -l
+ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+cp /home/tobias/UTN-FRA_SO_Examenes/202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+cp -r /home/tobias/UTN-FRA_SO_Examenes/202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+cd /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+clear
+ls -l
+cd 202406/
+ls -l
+cd docker/
+ls -l
+cat run.sh 
+cat web1-esquivel 
+clear
+cat index.html 
+clear
+cd ..
+history -a
+$HOME/.bash_history
+ls -l
+sudo $HOME/.bash_history
+$HOME/.bash_history
+sudo $HOME/.bash_history
+cat ~/.bash_history
+clear
