@@ -1,0 +1,271 @@
+    1  cd ..
+    2  cd tobias/
+    3  exit
+    4  clear
+    5  ls -la
+    6  cd ..
+    7  cd tobias/
+    8  clear
+    9  ls -la
+   10  ssh-keygen
+   11  cd .ssh/
+   12  cat id_rsa.pub 
+   13  cd ..
+   14  mkdir repogit
+   15  cd repogit/
+   16  git clone git@github.com:tobiasesquivel/UTNFRA_SO_2do_Parcial_Esquivel.git
+   17  ls -l
+   18  clear
+   19  ls -l
+   20  cd ..
+   21  git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+   22  ./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh
+   23  source ~/.bashrc
+   24  ls -l
+   25  mv RTA_Examen_20241124/ repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+   26  clear
+   27  ls -l
+   28  cd repogit/
+   29  ls -l
+   30  cd UTNFRA_SO_2do_Parcial_Esquivel/
+   31  git --version
+   32  clear
+   33  cd ..
+   34  for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+   35  # Add Docker's official GPG key:
+   36  sudo apt-get update
+   37  sudo apt-get install ca-certificates curl
+   38  sudo install -m 0755 -d /etc/apt/keyrings
+   39  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   40  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   41  # Add the repository to Apt sources:
+   42  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   43    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   44  sudo apt-get update
+   45  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   46  sudo docker run hello-world
+   47  docker --version
+   48  sudo systemctl status docker
+   49  clear
+   50  sudo fdisk -l
+   51  sudo vgs
+   52  sudo lvs
+   53  sudo lsblk -f
+   54  df -h
+   55  sudo fdisk -l
+   56  clear
+   57  sudo fdisk -l
+   58  clear
+   59  lsblk
+   60  ls -l
+   61  cd repogit/
+   62  ls -l
+   63  cd UTNFRA_SO_2do_Parcial_Esquivel/
+   64  ls -l
+   65  cd RTA_Examen_20241124/
+   66  vim Punto_A.sh 
+   67  cat Punto_A.sh 
+   68  vim Punto_B.sh 
+   69  cat Punto_B.sh 
+   70  ls -l
+   71  touch ejecutar_esquivel.sh
+   72  ls -
+   73  -ls -l
+   74  clear
+   75  ls -l
+   76  chmod 777 ejecutar_esquivel.sh 
+   77  ls -l
+   78  vim ejecutar_esquivel.sh 
+   79  cat ejecutar_esquivel.sh 
+   80  cd ..
+   81  ls -l
+   82  git status
+   83  git add .
+   84  git status
+   85  git commit -m "Punto a y b completos"
+   86  git config --global user.email tobias15esquivel@gmail.com
+   87  git congig --global user.name tobiasesquivel
+   88  git config --global user.name tobiasesquivel
+   89  git status
+   90  git push
+   91  git commit -m "Puntos a y b completos"
+   92  git push
+   93  cd ..
+   94  ls -l
+   95  cd ..
+   96  ls -l
+   97  cd UTN-FRA_SO_Examenes/
+   98  ls -l
+   99  cd 202406
+  100  ls -l
+  101  cd docker/
+  102  ls -l
+  103  vim index.html 
+  104  id
+  105  sudo usermod -a -G docker $(whoami)
+  106  id
+  107  exit
+  108  id
+  109  clear
+  110  cd ..
+  111  cd tobias/
+  112  clear
+  113  ls -l
+  114  cd UTN-FRA_SO_Examenes/
+  115  ls -l
+  116  cd 202406
+  117  ls -l
+  118  cat script_Precondicion.sh 
+  119  clear
+  120  ls -l
+  121  cd docker/
+  122  ls -l
+  123  vim index.html 
+  124  touch web1-esquivel
+  125  vim web1-esquivel 
+  126  clear
+  127  ls -l
+  128  docker build -t web1-esquivel
+  129  docker build -t web1-esquivel .
+  130  docker login -u tobiasesquivel
+  131  clear
+  132  ls -l
+  133  docker build -t tobiasesquivel/web1-esquivel -f web1-esquivel .
+  134  ls -l
+  135  docker images
+  136  docker tag web1-esquivel tobiasesquivel/web1-esquivel
+  137  docker tag web1-esquivel tobiasesquivel/tobiasesquivel/web1-esquivel
+  138  clear
+  139  docker images
+  140  docker push tobiasesquivel/web1-esquivel
+  141  nano run.sh
+  142  cat run.sh 
+  143  chmod 777 run.sh 
+  144  ls -l
+  145  ./run.sh 
+  146  docker ps
+  147  sudo apt install net-tools
+  148  clear
+  149  sudo netstat -putona | grep ":8080"
+  150  sudo netstat | grep ":8080"
+  151  curl http://localhost:8080
+  152  docker ps
+  153  docker stop 679432b3889d
+  154  docker ps
+  155  cd ..
+  156  ls -l /home
+  157  ls -l /tobias
+  158  ls -l /home/tobias
+  159  ls -l /home/tobias/repogit/
+  160  ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  161  cp ./202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  162  ls -l
+  163  ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  164  cp /home/tobias/UTN-FRA_SO_Examenes/202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  165  cp -r /home/tobias/UTN-FRA_SO_Examenes/202406 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  166  ls -l /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  167  cd /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/
+  168  clear
+  169  ls -l
+  170  cd 202406/
+  171  ls -l
+  172  cd docker/
+  173  ls -l
+  174  cat run.sh 
+  175  cat web1-esquivel 
+  176  clear
+  177  cat index.html 
+  178  clear
+  179  cd ..
+  180  history -a
+  181  $HOME/.bash_history
+  182  ls -l
+  183  sudo $HOME/.bash_history
+  184  $HOME/.bash_history
+  185  sudo $HOME/.bash_history
+  186  cat ~/.bash_history
+  187  clear
+  188  cp ~/.bash_history ./bash_history_copy.txt
+  189  ls -l
+  190  cat bash_history_copy.txt 
+  191  clear
+  192  ls -l
+  193  git add .
+  194  git status
+  195  git commit -m "todos los puntos excepto el D terminados"
+  196  git push
+  197  ls -l
+  198  cd RTA_Examen_20241124/
+  199  ls -l
+  200  vim Punto_C.sh
+  201  clear
+  202  cd ..
+  203  ls -l
+  204  git status
+  205  git add .
+  206  git commit -m "punto c con script completado"
+  207  git push
+  208  clear
+  209  sudo apt update
+  210  sudo apt install ansible -y
+  211  sudo apt list --installed | grep ansible
+  212  ansible-playbook –help
+  213  sudo apt list --installed | grep git
+  214  clear
+  215  cd /home/tobias/
+  216  cd .ssh/
+  217  ls -l
+  218  cat id_rsa.pub
+  219  cat id_rsa.pub >> authorized_keys
+  220  cat authorized_keys 
+  221  ifconfig
+  222  cd ..
+  223  ls -l
+  224  cd repogit/
+  225  ls -l
+  226  cd UTNFRA_SO_2do_Parcial_Esquivel/
+  227  ls -l
+  228  cd RTA_Examen_20241124/
+  229  ls -l
+  230  vim Punto_D.sh 
+  231  cat Punto_D.sh 
+  232  vim Punto_D.sh 
+  233  clear
+  234  cat Punto_D.sh 
+  235  cd ..
+  236  git status
+  237  git add .
+  238  git commit -m "todos los puntos terminados"
+  239  git push
+  240  cd /home/tobias/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/
+  241  cd /home/tobias/repogit/UTN-FRA_SO_Examenes/202406/ansible/
+  242  cd /home/tobias/repogit/UTN-FRA_SO_Examenes/
+  243  LS -L
+  244  ls -l
+  245  cd RTA_Examen_20241124/
+  246  ls -l
+  247  vim Punto_D.sh 
+  248  cd /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible/roles/2do_parcial/
+  249  clear
+  250  cd ..
+  251  git add .
+  252  git commit -m "path punto d arreglado"
+  253  git push
+  254  ls -l
+  255  cat bash_history_copy.txt 
+  256  history -a > ./bash_history_copy.txt 
+  257  cat bash_history_copy.txt 
+  258  history -a
+  259  $HOME/.bash_history > ./bash_history_copy.txt 
+  260  sudo $HOME/.bash_history > ./bash_history_copy.txt 
+  261  clear
+  262  ls -l
+  263  cat archivo_historial.txt 
+  264  history > ./archivo_historial.txt
+  265  cat archivo_historial.txt 
+  266  clear
+  267  ls -l
+  268  rm archivo_historial.txt 
+  269  rm bash_history_copy.txt 
+  270  cat bash_history.txt 
+  271  history > ./bash_history.txt 
