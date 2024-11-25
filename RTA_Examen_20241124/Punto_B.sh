@@ -5,7 +5,7 @@ USUARIO=$1
 LISTA_USUARIOS=$2
 
 if [ $# -ne 2 ]; then
-    echo "Uso: $0 <usuario> <path_repositorio>/202406/bash_script/Lista_Usuarios.txt"
+    echo "Uso: $0 /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/bash_script/Lista_Usuarios.txt"
     exit 1
 fi
 
