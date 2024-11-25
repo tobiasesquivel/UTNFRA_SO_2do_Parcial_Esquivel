@@ -14,12 +14,13 @@ Todas las IP: {{ ansible_facts.all_ipv4_addresses }}
 EOF
 
 
+sudo tee -a /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible/roles/2do_parcial/tasks/main.yml << EOF
 # tasks file for 2do_parcial
 
 - debug:
     msg: "Tareas del 2do Parcial"
 
-- name: "Crear directorios en /tmp/"
+- name: "Crear estructura de directorios"
   file:
     path: "/tmp/2do_parcial/{{ item }}"
     state: directory
@@ -57,6 +58,7 @@ EOF
     line: '%2PSupervisores ALL=(ALL) NOPASSWD: ALL'
     validate: 'visudo -cf %s'
 
+EOF
 
+cd /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible
 sudo ansible-playbook -i inventory/hosts playbook.yml
-
