@@ -1,13 +1,13 @@
-sudo mkdir -p /home/tobias/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates
+sudo mkdir -p /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible/roles/2do_parcial/templates
 
-sudo tee /home/tobias/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/datos_alumno.txt.j2 <<EOF
+sudo tee /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible/roles/2do_parcial/templates/datos_alumno.txt.j2 <<EOF
 Nombre: {{ alumno_nombre }}
 Apellido: {{ alumno_apellido }}
 División: {{ alumno_division }}
 EOF
 
 
-sudo tee /home/tobias/repogit/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/templates/datos_equipo.txt.j2 <<EOF
+sudo tee /home/tobias/repogit/UTNFRA_SO_2do_Parcial_Esquivel/202406/ansible/roles/2do_parcial/templates/datos_equipo.txt.j2 <<EOF
 Nombre Distribucion: {{ ansible_facts.distribution }}
 IP: {{ ansible_default_ipv4.address }}
 Todas las IP: {{ ansible_facts.all_ipv4_addresses }}
